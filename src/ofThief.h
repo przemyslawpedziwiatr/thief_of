@@ -2,6 +2,11 @@
 
 #include "ofMain.h"
 #include "ofSplash.h"
+#include "ofLevel1.h"
+#include "ofLevel2.h"
+#include "ofLevel3.h"
+#include "ofLevel4.h"
+#include "ofFinish.h"
 
 class ofThief : public ofBaseApp{
 	public:
@@ -11,17 +16,11 @@ class ofThief : public ofBaseApp{
 		void draw();
 		
 		ofSplash splash;
-		int level;
+		ofLevel1 level1;
+		ofLevel2 level2;
+		ofLevel3 level3;
+		ofLevel4 level4;
+		ofFinish finish;
 
-		void keyPressed(int key);
-		void keyReleased(int key);
-		void mouseMoved(int x, int y);
-		void mouseDragged(int x, int y, int button);
-		void mousePressed(int x, int y, int button);
-		void mouseReleased(int x, int y, int button);
-		void mouseEntered(int x, int y);
-		void mouseExited(int x, int y);
-		void windowResized(int w, int h);
-		void dragEvent(ofDragInfo dragInfo);
-		void gotMessage(ofMessage msg);
+		int level;
 };

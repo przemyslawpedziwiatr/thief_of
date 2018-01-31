@@ -8,6 +8,8 @@ class ofLevel4 : public ofBaseApp{
 		void update();
 		void draw();
 		
+		bool isFinished;
+
 		void keyPressed(int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y);
