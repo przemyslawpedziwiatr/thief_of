@@ -142,4 +142,9 @@ void ofThief::keyReleased(int key) {
 		level2.setup();
 		level = LEVEL2;
 	}
+	if (key == '3') {
+		level3 = ofLevel3();
+		level3.setup();
+		level = LEVEL3;
+	}
 } 

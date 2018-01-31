@@ -9,16 +9,17 @@ class ofLevel3 : public ofBaseApp{
 		void draw();
 		
 		bool isFinished;
+		
+		ofTrueTypeFont hint;
+		string hintText;
 
-		void keyPressed(int key);
-		void keyReleased(int key);
-		void mouseMoved(int x, int y);
-		void mouseDragged(int x, int y, int button);
-		void mousePressed(int x, int y, int button);
-		void mouseReleased(int x, int y, int button);
-		void mouseEntered(int x, int y);
-		void mouseExited(int x, int y);
-		void windowResized(int w, int h);
-		void dragEvent(ofDragInfo dragInfo);
-		void gotMessage(ofMessage msg);
+		bool guessed;
+
+		ofImage background, lock, lockpick;
+		ofVec2f lockPos, lockpickPos;
+		int lockpickRotate, lockpickLowerBound, lockpickUpperBound;
+
+		void keyReleased(ofKeyEventArgs& ev);
+		void mouseMoved(ofMouseEventArgs& ev);
+		void mousePressed(ofMouseEventArgs& ev);
 };
