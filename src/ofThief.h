@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofSplash.h"
 
 class ofThief : public ofBaseApp{
 	public:
@@ -8,6 +9,10 @@ class ofThief : public ofBaseApp{
 		void update();
 		void draw();
 		
+		ofSplash splash;
+
+		string currentLevel;
+
 		void keyPressed(int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y);

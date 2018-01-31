@@ -1,18 +1,27 @@
 #include "ofThief.h"
+#include "ofFinish.h"
+#include "ofSplash.h"
 
 //--------------------------------------------------------------
 void ofThief::setup(){
+	splash = ofSplash();
+	splash.setup();
 
+	currentLevel = "splash";
 }
 
 //--------------------------------------------------------------
 void ofThief::update(){
-
+	if (currentLevel == "splash") {
+		splash.update();
+	}
 }
 
 //--------------------------------------------------------------
 void ofThief::draw(){
-
+	if (currentLevel == "splash") {
+		splash.draw();
+	}
 }
 
 //--------------------------------------------------------------

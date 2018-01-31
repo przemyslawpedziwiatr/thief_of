@@ -173,10 +173,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\ofFinish.cpp" />
+    <ClCompile Include="src\ofLevel1.cpp" />
+    <ClCompile Include="src\ofLevel2.cpp" />
+    <ClCompile Include="src\ofLevel3.cpp" />
+    <ClCompile Include="src\ofLevel4.cpp" />
+    <ClCompile Include="src\ofSplash.cpp" />
+    <ClCompile Include="src\ofThief.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\ofFinish.h" />
+    <ClInclude Include="src\ofLevel1.h" />
+    <ClInclude Include="src\ofLevel2.h" />
+    <ClInclude Include="src\ofLevel3.h" />
+    <ClInclude Include="src\ofLevel4.h" />
+    <ClInclude Include="src\ofSplash.h" />
+    <ClInclude Include="src\ofThief.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
