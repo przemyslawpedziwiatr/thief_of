@@ -1,71 +1,71 @@
-#include "ofApp.h"
+#include "ofThief.h"
 
 //--------------------------------------------------------------
-void ofApp::setup(){
+void ofThief::setup(){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::update(){
+void ofThief::update(){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::draw(){
+void ofThief::draw(){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key){
+void ofThief::keyPressed(int key){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::keyReleased(int key){
+void ofThief::keyReleased(int key){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y){
+void ofThief::mouseMoved(int x, int y){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
+void ofThief::mouseDragged(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
+void ofThief::mousePressed(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
+void ofThief::mouseReleased(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
+void ofThief::mouseEntered(int x, int y){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
+void ofThief::mouseExited(int x, int y){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
+void ofThief::windowResized(int w, int h){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
+void ofThief::gotMessage(ofMessage msg){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofThief::dragEvent(ofDragInfo dragInfo){ 
 
 }
