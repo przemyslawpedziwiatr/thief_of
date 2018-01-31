@@ -2,71 +2,49 @@
 
 //--------------------------------------------------------------
 void ofSplash::setup(){
-	text = "THIEF";
-	
-}
+	textTitle.load("Holitter_Tittan.ttf", 70, true, true);
+	textInstructions.load("Holitter_Tittan.ttf", 35, true, true);
+	ofBackground(0, 0, 0);
+	titleColorPulse = 0;
 
-//--------------------------------------------------------------
-void ofSplash::update(){
+	isFinished = false;
 
+	ofAddListener(ofEvents().keyReleased, this, &ofSplash::keyReleased);
 }
 
 //--------------------------------------------------------------
 void ofSplash::draw(){
-	ofDrawBitmapString(text, ofGetWidth() / 2, ofGetHeight() / 4);
+	drawTitle();
+	drawInstruction();
+}
+
+void ofSplash::drawTitle() {
+	titleColorPulse = ofRandom(125, 250);
+	ofSetColor(titleColorPulse);
+	textTitle.drawString("Thief",
+		-(textTitle.stringWidth("Thief") / 2) + ofGetWidth() / 2,
+		ofGetHeight() / 4);
+}
+
+void ofSplash::drawInstruction() {
+	ofSetColor(240);
+	string lines[5] = { "Run, crack, hack and hide!" ,
+					   "Open the safe!",
+						"Steal your biggest desire!",
+						" ",
+						"Press space to begin!"
+						};
+	for (int i = 0; i < 5; i++) {
+		std::cout << i << "\n";
+		textInstructions.drawString(lines[i],
+			-(textInstructions.stringWidth(lines[i]) / 2) + ofGetWidth() / 2,
+			ofGetHeight() / 2 + (i*50) );
+	}
 }
 
 //--------------------------------------------------------------
-void ofSplash::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofSplash::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofSplash::mouseMoved(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofSplash::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofSplash::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofSplash::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofSplash::mouseEntered(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofSplash::mouseExited(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofSplash::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void ofSplash::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofSplash::dragEvent(ofDragInfo dragInfo){ 
-
+void ofSplash::keyReleased(ofKeyEventArgs& eventArgs){
+	if (eventArgs.key == ' ') {
+		isFinished = true;
+	}
 }

@@ -2,25 +2,50 @@
 #include "ofFinish.h"
 #include "ofSplash.h"
 
+enum levels {
+	SPLASH,
+	LEVEL1,
+	LEVEL2,
+	LEVEL3,
+	LEVEL4,
+	FINISH
+};
+
 //--------------------------------------------------------------
 void ofThief::setup(){
 	splash = ofSplash();
 	splash.setup();
 
-	currentLevel = "splash";
+	level = SPLASH;
 }
 
 //--------------------------------------------------------------
 void ofThief::update(){
-	if (currentLevel == "splash") {
-		splash.update();
+	checkLevels();
+
+	switch(level) {
+		case SPLASH: {
+			splash.update();
+			break;
+		}
+	}
+}
+
+void ofThief::checkLevels() {
+	if (level == SPLASH) {
+		if (splash.isFinished) {
+			level = LEVEL1;
+		}
 	}
 }
 
 //--------------------------------------------------------------
 void ofThief::draw(){
-	if (currentLevel == "splash") {
-		splash.draw();
+	switch (level) {
+		case SPLASH: {
+			splash.draw();
+			break;
+		}
 	}
 }
 

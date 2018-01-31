@@ -7,11 +7,11 @@ class ofThief : public ofBaseApp{
 	public:
 		void setup();
 		void update();
+		void checkLevels();
 		void draw();
 		
 		ofSplash splash;
-
-		string currentLevel;
+		int level;
 
 		void keyPressed(int key);
 		void keyReleased(int key);
