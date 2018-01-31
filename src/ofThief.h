@@ -23,4 +23,6 @@ class ofThief : public ofBaseApp{
 		ofFinish finish;
 
 		int level;
+
+		void keyReleased(int key);
 };

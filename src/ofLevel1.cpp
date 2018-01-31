@@ -29,7 +29,7 @@ void ofLevel1::setup(){
 
 	
 }
-
+	
 void ofLevel1::pushLeaves() {
 	for (int i = 0; i < leavesAmount; i++) {
 		ofImage leaf = ofImage();
@@ -103,6 +103,7 @@ void ofLevel1::update(){
 			if (leafesOut > leavesAmount * 0.70) {
 				iteration += 1;
 				resetLeaves();
+				resizeSteps = 0;
 			}
 			break;
 		}

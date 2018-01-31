@@ -24,9 +24,7 @@ void ofThief::setup(){
 	level1 = ofLevel1();
 	level1.setup();
 
-	level2 = ofLevel2();
-	level2.setup();
-
+	/*
 	level3 = ofLevel3();
 	level3.setup();
 
@@ -34,7 +32,7 @@ void ofThief::setup(){
 	level4.setup();
 
 	finish = ofFinish();
-	finish.setup();
+	finish.setup();*/
 
 	level = SPLASH;
 }
@@ -75,12 +73,14 @@ void ofThief::checkLevels() {
 	switch (level) {
 		case SPLASH: {
 			if (splash.isFinished) {
-				level = LEVEL1;
+				level = LEVEL1; // debug!
 			}
 			break;
 		}
 		case LEVEL1: {
 			if (level1.isFinished) {
+				level2 = ofLevel2();
+				level2.setup();
 				level = LEVEL2;
 			}
 			break;
@@ -136,3 +136,10 @@ void ofThief::draw(){
 	}
 }
 
+void ofThief::keyReleased(int key) {
+	if (key == '2') {
+		level2 = ofLevel2();
+		level2.setup();
+		level = LEVEL2;
+	}
+} 
