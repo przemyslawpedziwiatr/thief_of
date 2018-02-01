@@ -5,14 +5,14 @@ void ofFinish::setup(){
 	isFinished = false;
 	background.load("safe-open.jpg");
 
-	prices.push_back("Good\nliving!");
+	prices.push_back("New\ntracksuit!");
 	prices.push_back("Great\ngrades!");
 	prices.push_back("Holidays\nin\nMorocco!");
 	prices.push_back("Absolutetly\nnothing!");
-	prices.push_back("Long\nlife!");
+	prices.push_back("Golf 3!");
 	prices.push_back("A skateboard?!");
 	prices.push_back("Chuck\nNorris's\nhandshake!");
-	prices.push_back("Something\ncool!");
+	prices.push_back("Volkswagen\nPassat!");
 
 	price.load("Holitter_Tittan.ttf", 90);
 	wonPrice = ofRandom(0, prices.size()-1);
