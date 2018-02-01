@@ -75,7 +75,7 @@ void ofLevel2::update(){
 		case 3: {
 		
 			int blow = checkBlowAmount();
-			if (blow > 95) {
+			if (blow > 87) {
 				iteration += 1;
 				checkVolume = false;
 				elapsedFrames = 0;
