@@ -10,6 +10,16 @@ class ofFinish : public ofBaseApp{
 		
 		bool isFinished;
 
+		ofImage background;
+		
+		ofTrueTypeFont price;
+		std::vector<string> prices;
+
+		ofTrueTypeFont hint;
+		string hintText;
+
+		int wonPrice;
+
 		void keyPressed(int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y);

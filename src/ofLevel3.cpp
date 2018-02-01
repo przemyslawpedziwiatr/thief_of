@@ -23,6 +23,7 @@ void ofLevel3::setup(){
 	hint.load("Holitter_Tittan.ttf", 35, true, true);
 	hintText = "Rotate with mouse and click to pick!";
 
+
 	guessed = false;
 }
 

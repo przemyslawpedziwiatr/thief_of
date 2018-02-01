@@ -8,6 +8,9 @@ void ofLevel2::setup(){
 	createFlame();
 	randomCandlePosition();
 
+	text.load("Holitter_Tittan.ttf", 35);
+	hint = "Blow on your computer!\nBigger flame = blow harder!";
+
 	flameno = 0;
 	counter = 0;
 	counterlimit = 50;
@@ -72,9 +75,8 @@ void ofLevel2::update(){
 		case 3: {
 		
 			int blow = checkBlowAmount();
-			if (blow > 80) {
+			if (blow > 95) {
 				iteration += 1;
-				randomCandlePosition();
 				checkVolume = false;
 				elapsedFrames = 0;
 			}
@@ -133,7 +135,14 @@ void ofLevel2::draw(){
 
 	ofPopMatrix();
 
-	ofDrawBitmapString(ofToString(scaledVol * 100.0, 0), 100, 100);
+
+	ofPushStyle();
+	ofSetColor(220, 220, 220);
+	text.drawString(hint,
+		ofGetWidth() / 2 - text.stringWidth(hint) / 2,
+		ofGetHeight() - ofGetHeight() / 8
+	);
+	ofPopStyle();
 }
 
 void ofLevel2::createCandle() {

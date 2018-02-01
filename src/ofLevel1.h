@@ -20,6 +20,9 @@ class ofLevel1 : public ofBaseApp{
 		bool				bLearnBakground;
 		float ratio;
 
+		ofTrueTypeFont text;
+		string hint;
+			
 		void setup();
 		void pushLeaves();
 		void update();

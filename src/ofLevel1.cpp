@@ -7,7 +7,10 @@ void ofLevel1::setup(){
 	iteration = 1;
 	ofAddListener(ofEvents().keyReleased, this, &ofLevel1::keyReleased);
 
-	leavesAmount = 30;
+	text.load("Holitter_Tittan.ttf", 35);
+	hint = "Use arms to move leaves aside!";
+
+	leavesAmount = 30;;
 	pushLeaves();
 
 	lastTime = ofGetElapsedTimef();
@@ -139,7 +142,7 @@ int ofLevel1::checkLeavesOut() {
 
 //--------------------------------------------------------------
 void ofLevel1::draw(){
-	diffImg.draw(0, 0);
+	diffImg.draw(0, 0, 1200, 800);
 	ofSetColor(255, 255, 255, 200);
 	ofPushMatrix();
 	background.setAnchorPercent(0.5, 0.5);
@@ -162,6 +165,14 @@ void ofLevel1::draw(){
 	else if (iteration == 3) {
 		stepCloser();
 	}
+
+	ofPushStyle();
+	ofSetColor(220, 220, 220);
+	text.drawString(hint,
+		ofGetWidth() / 2 - text.stringWidth(hint) / 2,
+		ofGetHeight() - ofGetHeight() / 10
+	);
+	ofPopStyle();
 }
 
 void ofLevel1::stepCloser() {

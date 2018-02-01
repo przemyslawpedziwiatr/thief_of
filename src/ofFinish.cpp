@@ -3,6 +3,19 @@
 //--------------------------------------------------------------
 void ofFinish::setup(){
 	isFinished = false;
+	background.load("safe-open.jpg");
+
+	prices.push_back("Good\nliving!");
+	prices.push_back("Great\ngrades!");
+	prices.push_back("Holidays\nin\nMorocco!");
+	prices.push_back("Absolutetly\nnothing!");
+	prices.push_back("Long\nlife!");
+	prices.push_back("A skateboard?!");
+	prices.push_back("Chuck\nNorris's\nhandshake!");
+	prices.push_back("Something\ncool!");
+
+	price.load("Holitter_Tittan.ttf", 90);
+	wonPrice = ofRandom(0, prices.size()-1);
 }
 
 //--------------------------------------------------------------
@@ -12,7 +25,16 @@ void ofFinish::update(){
 
 //--------------------------------------------------------------
 void ofFinish::draw(){
+	background.draw(0, 0);
 
+	string actualPrice = prices[wonPrice];
+
+	ofPushStyle();
+	ofSetColor(ofRandom(125, 250), ofRandom(125, 250), ofRandom(125, 250));
+	price.drawString("Stolen:\n" + actualPrice,
+		-(price.stringWidth("Stolen:\n" + actualPrice) / 2) + ofGetWidth() / 2,
+		ofGetHeight() / 5);
+	ofPopStyle();
 }
 
 //--------------------------------------------------------------
